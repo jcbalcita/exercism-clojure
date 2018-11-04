@@ -1,5 +1,9 @@
 (ns two-fer)
 
-(defn two-fer [name] ;; <- arglist goes here
-  ;; your code goes here
+(defn make-message [name]
+  (str (str "One for " name) ", one for me."))
+
+(defn two-fer 
+  ([] (make-message "you")) 
+  ([name] (make-message name))
 )
